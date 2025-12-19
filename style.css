@@ -171,7 +171,7 @@ footer {
     
 }
 .slide img {
-    width: 50%;
+    width: 100%;
     height: auto; /* keeps aspect ratio */
     display: block;
     object-fit: cover; /* ensures images cover the slide area nicely */
