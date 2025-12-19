@@ -179,19 +179,7 @@ footer {
     display: block;
     object-fit: cover; /* ensures images cover the slide area nicely */
 }
-<null>.slideshow-container {
-    max-width: 760px;
-    margin: auto;
-    position: relative;
-    overflow: hidden;
-    border-radius: 12px;
-}
 
-/* Slide images */
-.slide img {
-    width: 100%;
-    display: block;<\null>
-}
 
 /* Caption text */
 .caption {
