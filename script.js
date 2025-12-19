@@ -9,14 +9,30 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 let slides = document.querySelectorAll(".slide");
-let currentSlide = 0;
+let dots = document.querySelectorAll(".dot");
+let currentIndex = 0;
 
 function showSlide(index) {
-    slides.forEach(slide => slide.classList.remove("active"));
+    slides.forEach((slide, i) => {
+        slide.classList.remove("active");
+        dots[i].classList.remove("active");
+    });
     slides[index].classList.add("active");
+    dots[index].classList.add("active");
+    currentIndex = index;
 }
 
-setInterval(() => {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-}, 4000); // changes every 4 seconds
+// Automatic slideshow
+function nextSlide() {
+    let nextIndex = (currentIndex + 1) % slides.length;
+    showSlide(nextIndex);
+}
+
+// Click on dots
+function currentSlide(index) {
+    showSlide(index);
+}
+
+// Initialize
+showSlide(0);
+setInterval(nextSlide, 4000); // Change every 4 seconds
