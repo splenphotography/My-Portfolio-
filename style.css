@@ -160,6 +160,16 @@ footer {
     }
 /* Slideshow */
 #slideshow {
+    padding: 0;
+    background: #000; /* black background if images don’t fully cover */
+}
+
+.slideshow-container {
+    height: 60vh; /* 60% of viewport height on desktop */
+    min-height: 400px; /* prevents it from being too small on desktop */
+}
+    
+#slideshow {
     width: 100%;
     padding: 40px 0;
     background: #f9f9f9;
