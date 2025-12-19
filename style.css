@@ -166,17 +166,13 @@ footer {
 
 .slideshow-container {
     height: 60vh; /* 60% of viewport height on desktop */
-    min-height: 400px; /* prevents it from being too small on desktop */
+    min-height: 200px; /* prevents it from being too small on desktop */
 }
     
 }
 .slide img {
     width: 100%;
     height: auto; /* keeps aspect ratio */
-    display: block;
-    object-fit: cover; /* ensures images cover the slide area nicely */
-}
-
 
 /* Caption text */
 .caption {
@@ -208,12 +204,12 @@ footer {
 /* Dots */
 .dots-container {
     text-align: center;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .dot {
-    height: 15px;
-    width: 15px;
+    height: 10px;
+    width: 10px;
     margin: 0 5px;
     background-color: #bbb;
     border-radius: 50%;
