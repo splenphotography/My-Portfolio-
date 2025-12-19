@@ -164,8 +164,22 @@ footer {
     padding: 40px 0;
     background: #f9f9f9;
 }
-
 .slideshow-container {
+    width: 100%;
+    max-width: 1200px; /* optional max width for large screens */
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.slide img {
+    width: 100%;
+    height: auto; /* keeps aspect ratio */
+    display: block;
+    object-fit: cover; /* ensures images cover the slide area nicely */
+}
+<null>.slideshow-container {
     max-width: 760px;
     margin: auto;
     position: relative;
@@ -176,7 +190,7 @@ footer {
 /* Slide images */
 .slide img {
     width: 100%;
-    display: block;
+    display: block;<\null>
 }
 
 /* Caption text */
