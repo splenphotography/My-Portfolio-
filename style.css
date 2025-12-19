@@ -162,89 +162,86 @@ footer {
 /* =========================
    SLIDESHOW SECTION
 ========================= */
-
+/* Slideshow Section */
 #slideshow {
     width: 100%;
     background: #000;
-    padding: 60px 0;
+    padding: 0;
+    overflow: hidden;
 }
 
+/* Container */
 .slideshow-container {
     position: relative;
-    width: 90%;
-    max-width: 1200px;
-    height: 60vh;
-    min-height: 420px;
+    width: 100%;
+    max-width: 1200px;   /* keeps it elegant on desktop */
+    height: 60vh;        /* desktop height */
     margin: auto;
     overflow: hidden;
-    border-radius: 16px;
 }
 
 /* Slides */
 .slide {
     position: absolute;
-    inset: 0;
+    width: 100%;
+    height: 100%;
     opacity: 0;
-    transition: opacity 1.5s ease-in-out;
+    transition: opacity 1.2s ease-in-out;
 }
 
+/* Active slide */
 .slide.active {
     opacity: 1;
-    z-index: 1;
 }
 
-/* Slide images */
+/* Images */
 .slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    display: block;
+    object-fit: cover;   /* THIS fixes oversized images */
 }
 
 /* Caption */
 .caption {
     position: absolute;
-    bottom: 12%;
+    bottom: 15%;
     left: 50%;
     transform: translateX(-50%);
     color: #fff;
-    font-size: clamp(1rem, 2.2vw, 2rem);
-    background: rgba(0, 0, 0, 0.55);
-    padding: 12px 24px;
-    border-radius: 8px;
-    text-align: center;
+    font-size: 1.5rem;
+    background: rgba(0,0,0,0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
 }
 
 /* Dots */
 .dots-container {
-    margin-top: 18px;
     text-align: center;
+    padding: 15px 0;
 }
 
 .dot {
-    height: 14px;
-    width: 14px;
-    margin: 0 6px;
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
     background-color: #777;
     border-radius: 50%;
     display: inline-block;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 .dot.active {
     background-color: #FFB74D;
 }
 
-/* Mobile Optimization */
+/* Mobile adjustment */
 @media (max-width: 768px) {
     .slideshow-container {
-        height: 45vh;
-        min-height: 260px;
+        height: 40vh;
     }
 
     .caption {
-        bottom: 8%;
-        padding: 8px 16px;
+        font-size: 1.1rem;
+        bottom: 10%;
     }
 }
