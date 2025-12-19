@@ -173,6 +173,12 @@ footer {
 .slide img {
     width: 100%;
     height: auto; /* keeps aspect ratio */
+.slide img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 /* Caption text */
 .caption {
