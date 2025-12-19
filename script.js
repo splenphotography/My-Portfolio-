@@ -8,31 +8,31 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
-let slides = document.querySelectorAll(".slide");
-let dots = document.querySelectorAll(".dot");
-let currentIndex = 0;
+
+let slideIndex = 0;
+const slides = document.querySelectorAll(".slide");
+const dots = document.querySelectorAll(".dot");
 
 function showSlide(index) {
     slides.forEach((slide, i) => {
         slide.classList.remove("active");
         dots[i].classList.remove("active");
     });
+
     slides[index].classList.add("active");
     dots[index].classList.add("active");
-    currentIndex = index;
 }
 
-// Automatic slideshow
 function nextSlide() {
-    let nextIndex = (currentIndex + 1) % slides.length;
-    showSlide(nextIndex);
+    slideIndex = (slideIndex + 1) % slides.length;
+    showSlide(slideIndex);
 }
 
-// Click on dots
 function currentSlide(index) {
-    showSlide(index);
+    slideIndex = index;
+    showSlide(slideIndex);
 }
 
-// Initialize
-showSlide(0);
-setInterval(nextSlide, 4000); // Change every 4 seconds
+/* Start slideshow */
+showSlide(slideIndex);
+setInterval(nextSlide, 5000); // 5 seconds
