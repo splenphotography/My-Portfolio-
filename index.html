@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Splen Photography Portfolio</title>
+
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-</head>
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
-<script>
-(function(){
-    emailjs.init("PUBLIC_KEY_HERE"); // ← your public key
-})();
-</script>
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("YOUR_PUBLIC_KEY"); // replace with your real key
+        })();
+    </script>
+</head>
+
 <body>
+
     <!-- Hero Section -->
     <header id="hero">
         <div class="hero-content">
@@ -27,60 +31,68 @@
     <!-- About Section -->
     <section id="about">
         <h2>About Me</h2>
-        <p>Creative photographer and visual storyteller based in Plateau, Nigeria. I capture moments that resonate and tell stories that last.</p>
+        <p>
+            Creative photographer and visual storyteller based in Plateau, Nigeria.
+            I capture moments that resonate and tell stories that last.
+        </p>
         <div class="social-icons">
             <a href="#" target="_blank">Instagram</a>
             <a href="#" target="_blank">Twitter</a>
             <a href="#" target="_blank">Linktree</a>
         </div>
     </section>
-<!-- Slideshow Section -->
-<section id="slideshow">
-    <div class="slideshow-container">
 
-        <div class="slide fade">
-            <img src="images/slide1.jpg" alt="Slide 1">
-            <div class="caption">Beautiful Landscape</div>
+    <!-- Slideshow Section -->
+    <section id="slideshow">
+        <div class="slideshow-container">
+
+            <div class="slide fade">
+                <img src="images/slide1.jpg" alt="Beautiful Landscape">
+                <div class="caption">Beautiful Landscape</div>
+            </div>
+
+            <div class="slide fade">
+                <img src="images/slide2.jpg" alt="Creative Portrait">
+                <div class="caption">Creative Portrait</div>
+            </div>
+
+            <div class="slide fade">
+                <img src="images/slide3.jpg" alt="Wedding Moment">
+                <div class="caption">Wedding Moment</div>
+            </div>
+
         </div>
 
-        <div class="slide fade">
-            <img src="images/slide2.jpg" alt="Slide 2">
-            <div class="caption">Creative Portrait</div>
+        <div class="dots-container">
+            <span class="dot" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
         </div>
+    </section>
 
-        <div class="slide fade">
-            <img src="images/slide3.jpg" alt="Slide 3">
-            <div class="caption">Wedding Moment</div>
-        </div>
-
-    </div>
-
-    <!-- Dots -->
-    <div class="dots-container">
-        <span class="dot" onclick="currentSlide(0)"></span>
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-    </div>
-</section>
     <!-- Portfolio Section -->
     <section id="portfolio">
         <h2>Featured Projects</h2>
         <div class="projects-grid">
+
             <div class="project-card">
-                <img src="images/project1.jpg" alt="Project 1">
+                <img src="images/project1.jpg" alt="Wedding Photography">
                 <h3>Weddings</h3>
-                <p>Short description of the project.</p>
+                <p>Elegant wedding moments and timeless memories.</p>
             </div>
+
             <div class="project-card">
-                <img src="images/project2.jpg" alt="Project 2">
+                <img src="images/project2.jpg" alt="Portrait Photography">
                 <h3>Portrait</h3>
-                <p>Portrait Beauty cooperate shoot.</p>
+                <p>Professional and beauty portrait sessions.</p>
             </div>
+
             <div class="project-card">
-                <img src="images/project3.jpg" alt="Project 3">
+                <img src="images/project3.jpg" alt="Model Shoot">
                 <h3>Model Shoot</h3>
-                <p>Creative modelling shoots.</p>
+                <p>Creative fashion and modelling shoots.</p>
             </div>
+
         </div>
     </section>
 
@@ -88,12 +100,13 @@
     <section id="contact">
         <h2>Contact Me</h2>
 
-        <form id="contact-form">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" placeholder="Your Message" required></textarea>
-    <button type="submit">Send Message</button>
-</form>
+        <form id="contact-form" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+
         <p>Or reach me via social links above.</p>
     </section>
 
