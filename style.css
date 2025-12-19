@@ -237,7 +237,7 @@ footer {
 /* Mobile adjustment */
 @media (max-width: 768px) {
     .slideshow-container {
-        height: 40vh;
+        height: 60vh;
     }
 
     .caption {
