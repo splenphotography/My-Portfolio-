@@ -175,7 +175,7 @@ footer {
     background: #f9f9f9;
 }
 .slideshow-container {
-    width: 100%;
+    width: 50%;
     max-width: 700px; /* optional max width for large screens */
     margin: auto;
     position: relative;
@@ -184,7 +184,7 @@ footer {
 }
 
 .slide img {
-    width: 100%;
+    width: 50%;
     height: auto; /* keeps aspect ratio */
     display: block;
     object-fit: cover; /* ensures images cover the slide area nicely */
