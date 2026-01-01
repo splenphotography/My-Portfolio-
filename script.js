@@ -1,51 +1,64 @@
-// Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        target.scrollIntoView({
-            behavior: 'smooth'
-        });
+document.addEventListener("DOMContentLoaded", function () {
+
+  /* =========================
+     Smooth Scroll
+  ========================= */
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute("href"));
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
+      }
     });
-});
+  });
 
-let slideIndex = 0;
-const slides = document.querySelectorAll(".slide");
-const dots = document.querySelectorAll(".dot");
+  /* =========================
+     Slideshow
+  ========================= */
+  let slideIndex = 0;
+  const slides = document.querySelectorAll(".slide");
+  const dots = document.querySelectorAll(".dot");
 
-function showSlide(index) {
+  function showSlide(index) {
     slides.forEach((slide, i) => {
-        slide.classList.remove("active");
-        dots[i].classList.remove("active");
+      slide.style.display = "none";
+      dots[i].classList.remove("active");
     });
 
-    slides[index].classList.add("active");
+    slides[index].style.display = "block";
     dots[index].classList.add("active");
-}
+  }
 
-function nextSlide() {
+  function nextSlide() {
     slideIndex = (slideIndex + 1) % slides.length;
     showSlide(slideIndex);
-}
+  }
 
-function currentSlide(index) {
+  window.currentSlide = function (index) {
     slideIndex = index;
     showSlide(slideIndex);
-}
+  };
 
-/* Start slideshow */
-showSlide(slideIndex);
-setInterval(nextSlide, 5000); // 5 seconds
+  if (slides.length > 0) {
+    showSlide(slideIndex);
+    setInterval(nextSlide, 5000); // 5 seconds
+  }
 
-<script>
-  window.onload = function () {
-    if (!localStorage.getItem("newYearPopupShown")) {
-      document.getElementById("newYearPopup").style.display = "flex";
+  /* =========================
+     Happy New Year Popup
+  ========================= */
+  const popup = document.getElementById("newYearPopup");
+
+  if (popup && !localStorage.getItem("newYearPopupShown")) {
+    popup.style.display = "flex";
+  }
+
+  window.closePopup = function () {
+    if (popup) {
+      popup.style.display = "none";
+      localStorage.setItem("newYearPopupShown", "true");
     }
   };
 
-  function closePopup() {
-    document.getElementById("newYearPopup").style.display = "none";
-    localStorage.setItem("newYearPopupShown", "true");
-  }
-</script>
+});
