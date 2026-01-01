@@ -36,3 +36,16 @@ function currentSlide(index) {
 /* Start slideshow */
 showSlide(slideIndex);
 setInterval(nextSlide, 5000); // 5 seconds
+
+<script>
+  window.onload = function () {
+    if (!localStorage.getItem("newYearPopupShown")) {
+      document.getElementById("newYearPopup").style.display = "flex";
+    }
+  };
+
+  function closePopup() {
+    document.getElementById("newYearPopup").style.display = "none";
+    localStorage.setItem("newYearPopupShown", "true");
+  }
+</script>
