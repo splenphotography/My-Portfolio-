@@ -1,135 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Splen Photography Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Splen Photography Portfolio</title>
 
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-    <!-- EmailJS -->
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    <script>
-        (function () {
-            emailjs.init("5RIcv3-DuPeqq9mZI"); // replace with your real key
-        })();
-    </script>
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init("5RIcv3-DuPeqq9mZI");
+    })();
+  </script>
 </head>
 
-</div> 
-    
 <body>
 
-    <!-- Hero Section -->
-    <header id="hero">
-        <div class="hero-content">
-            <h1>Splen Photography</h1>
-            <p>Photographer & Creative Director</p>
-            <a href="#portfolio" class="btn">View Portfolio</a>
-        </div>
-    </header>
+  <!-- Hero Section -->
+  <header id="hero">
+    <div class="hero-content">
+      <h1>Splen Photography</h1>
+      <p>Photographer & Creative Director</p>
+      <a href="#portfolio" class="btn">View Portfolio</a>
+    </div>
+  </header>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            Creative photographer and visual storyteller based in Plateau, Nigeria.
-            I capture moments that resonate and tell stories that last.
-        </p>
-        <div class="social-icons">
-            <a href="#" target="_blank">Instagram</a>
-            <a href="#" target="_blank">Twitter</a>
-            <a href="#" target="_blank">Linktree</a>
-        </div>
-    </section>
-
-    <!-- Slideshow Section -->
-    <section id="slideshow">
-        <div class="slideshow-container">
-
-            <div class="slide fade">
-                <img src="images/slide1.jpg" alt="Beautiful Landscape">
-                <div class="caption">Beautiful Landscape</div>
-            </div>
-
-            <div class="slide fade">
-                <img src="images/slide2.jpg" alt="Creative Portrait">
-                <div class="caption">Creative Portrait</div>
-            </div>
-
-            <div class="slide fade">
-                <img src="images/slide3.jpg" alt="Wedding Moment">
-                <div class="caption">Wedding Moment</div>
-            </div>
-
-        </div>
-
-        <div class="dots-container">
-            <span class="dot" onclick="currentSlide(0)"></span>
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio">
-        <h2>Featured Projects</h2>
-        <div class="projects-grid">
-
-            <div class="project-card">
-                <img src="images/project1.jpg" alt="Wedding Photography">
-                <h3>Weddings</h3>
-                <p>Elegant wedding moments and timeless memories.</p>
-            </div>
-
-            <div class="project-card">
-                <img src="images/project2.jpg" alt="Portrait Photography">
-                <h3>Portrait</h3>
-                <p>Professional and beauty portrait sessions.</p>
-            </div>
-
-            <div class="project-card">
-                <img src="images/project3.jpg" alt="Model Shoot">
-                <h3>Model Shoot</h3>
-                <p>Creative fashion and modelling shoots.</p>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-
-        <form id="contact-form" method="post">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-
-        <p>Or reach me via social links above.</p>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Splen Photography. All Rights Reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
-
-   <!-- Happy New Year Popup -->
-<div id="newYearPopup" class="ny-popup">
-  <div class="ny-popup-content">
-    <span class="ny-close" onclick="closePopup()">&times;</span>
-    <h1>🎉 Happy New Year 2026 🎉</h1>
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
     <p>
-      Thank you for your love, support, and trust.<br>
-      Wishing you success, joy, and endless blessings this year!
+      Creative photographer and visual storyteller based in Plateau, Nigeria.
+      I capture moments that resonate and tell stories that last.
     </p>
-    <button onclick="closePopup()">Enter Website</button>
+    <div class="social-icons">
+      <a href="#" target="_blank">Instagram</a>
+      <a href="#" target="_blank">Twitter</a>
+      <a href="#" target="_blank">Linktree</a>
+    </div>
+  </section>
+
+  <!-- Slideshow Section -->
+  <section id="slideshow">
+    <div class="slideshow-container">
+
+      <div class="slide fade">
+        <img src="images/slide1.jpg" alt="Beautiful Landscape">
+        <div class="caption">Beautiful Landscape</div>
+      </div>
+
+      <div class="slide fade">
+        <img src="images/slide2.jpg" alt="Creative Portrait">
+        <div class="caption">Creative Portrait</div>
+      </div>
+
+      <div class="slide fade">
+        <img src="images/slide3.jpg" alt="Wedding Moment">
+        <div class="caption">Wedding Moment</div>
+      </div>
+
+    </div>
+
+    <div class="dots-container">
+      <span class="dot" onclick="currentSlide(0)"></span>
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio">
+    <h2>Featured Projects</h2>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <img src="images/project1.jpg" alt="Wedding Photography">
+        <h3>Weddings</h3>
+        <p>Elegant wedding moments and timeless memories.</p>
+      </div>
+
+      <div class="project-card">
+        <img src="images/project2.jpg" alt="Portrait Photography">
+        <h3>Portrait</h3>
+        <p>Professional and beauty portrait sessions.</p>
+      </div>
+
+      <div class="project-card">
+        <img src="images/project3.jpg" alt="Model Shoot">
+        <h3>Model Shoot</h3>
+        <p>Creative fashion and modelling shoots.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+
+    <form id="contact-form" method="post">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <p>Or reach me via social links above.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Splen Photography. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Happy New Year Popup -->
+  <div id="newYearPopup" class="ny-popup">
+    <div class="ny-popup-content">
+      <span class="ny-close" onclick="closePopup()">&times;</span>
+      <h1>🎉 Happy New Year 2026 🎉</h1>
+      <p>
+        Thank you for your love, support, and trust.<br>
+        Wishing you success, joy, and endless blessings this year!
+      </p>
+      <button onclick="closePopup()">Enter Website</button>
+    </div>
   </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+
+  <!-- Popup Script -->
+  <script>
+    window.onload = function () {
+      if (!localStorage.getItem("newYearPopupShown")) {
+        document.getElementById("newYearPopup").style.display = "flex";
+      }
+    };
+
+    function closePopup() {
+      document.getElementById("newYearPopup").style.display = "none";
+      localStorage.setItem("newYearPopupShown", "true");
+    }
+  </script>
 
 </body>
 </html>
