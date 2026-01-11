@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portrait Sessions - Splen Photography</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; background-color: #f4f4f4; color: #333; }
+        h1 { color: #0056b3; }
+        nav a { margin: 0 15px; text-decoration: none; color: #007bff; font-weight: bold; }
+        nav a:hover { text-decoration: underline; }
+        .content-wrapper { max-width: 900px; margin: 30px auto; padding: 20px; background-color: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); text-align: left; }
+        .content-wrapper img { max-width: 100%; height: auto; border-radius: 8px; margin-bottom: 20px; }
+        .back-link { display: block; margin-top: 30px; font-weight: bold; color: #007bff; text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Portrait Sessions</h1>
+        <nav>
+            <a href="../../index.html">Home</a> <!-- Go up two levels to root index.html -->
+            <a href="../index.html">Portfolio Gallery</a> <!-- Go up one level to portfolio/index.html -->
+        </nav>
+    </header>
+
+    <main>
+        <div class="content-wrapper">
+            <h2>Capturing Personality and Emotion</h2>
+            <img src="https://via.placeholder.com/600x400?text=Portrait+Example" alt="Elegant Portrait Shot">
+            <p>My portrait photography focuses on bringing out the authentic personality of each individual. Whether it's a professional headshot, a family portrait, or a creative artistic session, I strive to create images that truly resonate.</p>
+            <p>I work closely with clients to understand their vision and comfort, ensuring a relaxed and enjoyable experience that results in stunning and memorable photographs.</p>
+            <h3>Services Offered:</h3>
+            <ul>
+                <li>Individual & Professional Headshots</li>
+                <li>Family & Couple Sessions</li>
+                <li>Creative & Themed Portraits</li>
+            </ul>
+        </div>
+        <a href="../index.html" class="back-link">&larr; Back to Portfolio Gallery</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Splen Photography</p>
+    </footer>
+</body>
+</html>
