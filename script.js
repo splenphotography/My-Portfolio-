@@ -62,3 +62,15 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
 });
+/* =========================
+   Navbar Show on Scroll
+========================= */
+const navbar = document.getElementById("navbar");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 150) {
+    navbar.classList.add("show");
+  } else {
+    navbar.classList.remove("show");
+  }
+});
