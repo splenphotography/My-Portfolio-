@@ -73,4 +73,9 @@ window.addEventListener("scroll", () => {
   } else {
     navbar.classList.remove("show");
   }
+  "scripts": {
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview"
+}
 });
