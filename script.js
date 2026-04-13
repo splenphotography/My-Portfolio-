@@ -61,21 +61,41 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 
-});
-/* =========================
-   Navbar Show on Scroll
-========================= */
-const navbar = document.getElementById("navbar");
+  /* =========================
+     Navbar Show on Scroll
+  ========================= */
+  const navbar = document.getElementById("navbar");
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 150) {
-    navbar.classList.add("show");
-  } else {
-    navbar.classList.remove("show");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 150) {
+      navbar.classList.add("show");
+    } else {
+      navbar.classList.remove("show");
+    }
+  });
+
+  /* =========================
+     Contact Form with EmailJS
+  ========================= */
+  const contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      
+      const templateParams = {
+        name: this.name.value,
+        email: this.email.value,
+        message: this.message.value
+      };
+      
+      emailjs.send('service_id', 'template_id', templateParams)
+        .then(function() {
+          alert('Message sent successfully!');
+          contactForm.reset();
+        }, function(error) {
+          alert('Failed to send message. Please try again.');
+          console.error('EmailJS error:', error);
+        });
+    });
   }
-  "scripts": {
-  "dev": "vite",
-  "build": "vite build",
-  "preview": "vite preview"
-}
 });
