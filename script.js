@@ -1,20 +1,23 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   /* =========================
-     Smooth Scroll
+      Smooth Scroll
   ========================= */
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener("click", function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute("href"));
-      if (target) {
-        target.scrollIntoView({ behavior: "smooth" });
+      const href = this.getAttribute("href");
+      if (href !== "#") {
+        const target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: "smooth" });
+        }
       }
     });
   });
 
   /* =========================
-     Slideshow
+      Slideshow
   ========================= */
   let slideIndex = 0;
   const slides = document.querySelectorAll(".slide");
@@ -23,11 +26,17 @@ document.addEventListener("DOMContentLoaded", function () {
   function showSlide(index) {
     slides.forEach((slide, i) => {
       slide.style.display = "none";
-      dots[i].classList.remove("active");
+      if (dots[i]) {
+        dots[i].classList.remove("active");
+      }
     });
 
-    slides[index].style.display = "block";
-    dots[index].classList.add("active");
+    if (slides[index]) {
+      slides[index].style.display = "block";
+    }
+    if (dots[index]) {
+      dots[index].classList.add("active");
+    }
   }
 
   function nextSlide() {
@@ -46,53 +55,40 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   /* =========================
-     Happy New Year Popup
-  ========================= */
-  const popup = document.getElementById("newYearPopup");
-
-  if (popup && !localStorage.getItem("newYearPopupShown")) {
-    popup.style.display = "flex";
-  }
-
-  window.closePopup = function () {
-    if (popup) {
-      popup.style.display = "none";
-      localStorage.setItem("newYearPopupShown", "true");
-    }
-  };
-
-  /* =========================
-     Navbar Show on Scroll
+      Navbar Show on Scroll
   ========================= */
   const navbar = document.getElementById("navbar");
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 150) {
-      navbar.classList.add("show");
-    } else {
-      navbar.classList.remove("show");
-    }
-  });
+  if (navbar) {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 150) {
+        navbar.classList.add("show");
+      } else {
+        navbar.classList.remove("show");
+      }
+    });
+  }
 
   /* =========================
-     Contact Form with EmailJS
+      Contact Form with EmailJS
   ========================= */
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
-    contactForm.addEventListener('submit', function(event) {
+    contactForm.addEventListener('submit', function (event) {
       event.preventDefault();
-      
+
       const templateParams = {
         name: this.name.value,
         email: this.email.value,
         message: this.message.value
       };
-      
+
+      // Replace 'service_id' and 'template_id' with your actual EmailJS credentials
       emailjs.send('service_id', 'template_id', templateParams)
-        .then(function() {
+        .then(function () {
           alert('Message sent successfully!');
           contactForm.reset();
-        }, function(error) {
+        }, function (error) {
           alert('Failed to send message. Please try again.');
           console.error('EmailJS error:', error);
         });
