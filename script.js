@@ -83,7 +83,6 @@ document.addEventListener("DOMContentLoaded", function () {
         message: this.message.value
       };
 
-      // Replace 'service_id' and 'template_id' with your actual EmailJS credentials
       emailjs.send('service_id', 'template_id', templateParams)
         .then(function () {
           alert('Message sent successfully!');
