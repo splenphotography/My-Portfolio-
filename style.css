@@ -53,7 +53,6 @@ body {
   position: relative;
 }
 
-/* Overlay to darken hero image */
 #hero::before {
   content: "";
   position: absolute;
@@ -256,6 +255,11 @@ section h2 {
   background-color: #ffa500;
 }
 
+#contact p {
+  text-align: center;
+  margin-top: 15px;
+}
+
 /* =========================
    FOOTER
 ========================= */
@@ -296,7 +300,6 @@ footer {
   object-fit: cover;
 }
 
-/* Caption */
 .caption {
   position: absolute;
   bottom: 15%;
@@ -309,7 +312,6 @@ footer {
   border-radius: 5px;
 }
 
-/* Dots */
 .dots-container {
   text-align: center;
   padding: 15px 0;
@@ -331,7 +333,7 @@ footer {
 }
 
 /* =========================
-   HAPPY NEW YEAR POPUP
+   POPUP STYLES
 ========================= */
 .ny-popup {
   position: fixed;
@@ -347,8 +349,9 @@ footer {
 }
 
 .ny-popup-content {
-  position: relative; /* Added relative positioning for .ny-close absolute alignment */
+  position: relative;
   background: #fff;
+  color: #111;
   padding: 30px;
   max-width: 400px;
   width: 90%;
@@ -391,7 +394,6 @@ footer {
   cursor: pointer;
 }
 
-/* Animation */
 @keyframes popupFade {
   from {
     transform: scale(0.8);
